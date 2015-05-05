@@ -1,5 +1,5 @@
 ###### QNIBng image
-FROM qnib/supervisor
+FROM qnib/terminal
 MAINTAINER "Christian Kniep <christian@qnib.org>"
 
 RUN yum install -y nginx
