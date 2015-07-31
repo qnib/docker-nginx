@@ -1,6 +1,5 @@
 ###### QNIBng image
 FROM qnib/terminal
-MAINTAINER "Christian Kniep <christian@qnib.org>"
 
 RUN yum install -y nginx
 RUN sed -i '/worker_processes.*/a daemon off;' /etc/nginx/nginx.conf
