@@ -1,5 +1,5 @@
 ###### QNIBng image
-FROM qnib/terminal
+FROM qnib/terminal:cos7
 
 RUN yum install -y nginx
 RUN sed -i '/worker_processes.*/a daemon off;' /etc/nginx/nginx.conf
