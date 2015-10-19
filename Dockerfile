@@ -8,9 +8,11 @@ RUN dnf install -y make luajit-devel pcre-devel zlib-devel && \
     cd /opt/nginx-1.9.5/ && \
     ./configure --prefix=/usr/ --add-module=/opt/lua-nginx-module-0.9.17rc1 && \
     make -j2 && make install
+ADD etc/nginx/nginx.conf etc/nginx/mime.types /etc/nginx/
+RUN useradd -s /bin/false nginx && \
+    mkdir -p /var/log/nginx && chown nginx: /var/log/nginx
 ###
 
-ADD etc/nginx/nginx.conf etc/nginx/mime.types /etc/nginx/
 ADD etc/supervisord.d/nginx.ini /etc/supervisord.d/nginx.ini
 ADD opt/qnib/bin/start_nginx.sh /opt/qnib/bin/start_nginx.sh
 ADD etc/consul.d/nginx.json /etc/consul.d/

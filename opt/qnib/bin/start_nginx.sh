@@ -1,4 +1,4 @@
 #!/bin/bash
 
-/usr/sbin/nginx
+/usr/sbin/nginx -c /etc/nginx/nginx.conf
 
