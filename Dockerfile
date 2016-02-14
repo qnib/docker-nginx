@@ -1,5 +1,5 @@
 ###### QNIBng image
-FROM qnib/terminal:fd22
+FROM qnib/terminal
 
 RUN dnf install -y nginx
 RUN sed -i '/worker_processes.*/a daemon off;' /etc/nginx/nginx.conf
