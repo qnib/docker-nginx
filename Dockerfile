@@ -1,5 +1,5 @@
 ###### QNIBng image
-FROM qnib/terminal:fd22
+FROM qnib/terminal
 
 ENV NGINX_LIST_ROOT=false
 
